@@ -1,0 +1,5 @@
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\bin\Debug\QueueingSystem.dll
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\bin\Debug\QueueingSystem.pdb
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\obj\Debug\QueueingSystem.csprojAssemblyReference.cache
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\obj\Debug\QueueingSystem.dll
+C:\Users\vtkhoryx\source\repos\MathMeth_2\QueueingSystem\obj\Debug\QueueingSystem.pdb
