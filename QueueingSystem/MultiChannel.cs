@@ -35,6 +35,7 @@ namespace QueueingSystem
         double avgTimeInSystem;
         double avgTimeInQueue;
         double avgBusySystemPeriod;
+        double probOfQueue;
         double probSystemFree;
         double probSystemBusy;
 
@@ -56,8 +57,11 @@ namespace QueueingSystem
             {
                 double p0 = 0;
                 for (int s = 0; s < c; s++)
-                    p0 += (Math.Pow(c * rho, s) / Factorial(s) + Math.Pow(c * rho, c) /
-                                                                            (Factorial(c) * (1 - rho)));
+                {
+                    p0 += Math.Pow(c * rho, s) / Factorial(s);
+                }
+                p0 += Math.Pow(c * rho, c) 
+                    / (Factorial(c) * (1 - rho));
                 return 1 / p0;
             }
 
@@ -74,6 +78,9 @@ namespace QueueingSystem
             avgTimeInSystem = avgCallsAmount * iat;
             avgTimeInQueue = avgTimeInSystem - st;
 
+            probOfQueue = Math.Pow(rho * c, c + 1) * probSystemFree /
+                          Factorial(c) / (c - c * rho);
+
             avgBusySystemPeriod = 1 / (1 / st - lambda);
             
         }
@@ -88,9 +95,7 @@ namespace QueueingSystem
                 $"Lq \t= {avgCallsAmountInQueue:N3}\n" +
                 $"W \t= {avgTimeInSystem:N3}\n" +
                 $"Wq \t= {avgTimeInQueue:N3}\n" +
-                $"B \t= {avgBusySystemPeriod:N3}\n" +
-                $"p0 \t= {probSystemFree:N3}\n" +
-                $"p \t= {probSystemBusy:N3}\n");
+                $"1 - Wq(0) \t= {probOfQueue:N5}\n");
         }
     }
 }

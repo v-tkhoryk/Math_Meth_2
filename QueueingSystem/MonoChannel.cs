@@ -66,8 +66,8 @@ namespace QueueingSystem
                 $"W \t= {avgTimeInSystem:N3}\n" +
                 $"Wq \t= {avgTimeInQueue:N3}\n" +
                 $"B \t= {avgBusySystemPeriod:N3}\n" +
-                $"p0 \t= {probSystemFree:N3}\n" +
-                $"p \t= {probSystemBusy:N3}\n");
+                $"p0 \t= {probSystemFree:N5}\n" +
+                $"p \t= {probSystemBusy:N5}\n");
         }
     }
 }

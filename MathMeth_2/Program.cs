@@ -36,6 +36,8 @@ namespace MathMeth_2
             queue9.PrintResults();
             */
             #endregion
+
+            #region Second task
             var multi = new MultiChannel(4, 2, 10);
             multi.PrintResults();
 
@@ -44,6 +46,25 @@ namespace MathMeth_2
 
             var multi3 = new MultiChannel(0.3, 9, 10);
             multi3.PrintResults();
+
+            var multi4 = new MultiChannel(4, 1, 5);
+            multi4.PrintResults();
+
+            var multi5 = new MultiChannel(3, 1, 5);
+            multi5.PrintResults();
+
+            var multi6 = new MultiChannel(1, 1, 5);
+            multi6.PrintResults();
+
+            var multi7 = new MultiChannel(190, 0.1, 20);
+            multi7.PrintResults();
+
+            var multi8 = new MultiChannel(100, 0.1, 20);
+            multi8.PrintResults();
+
+            var multi9 = new MultiChannel(20, 0.1, 20);
+            multi9.PrintResults();
+            #endregion
 
             System.Console.ReadLine();
         }
